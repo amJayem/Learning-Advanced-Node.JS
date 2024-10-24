@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import { Suspense, StrictMode } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { HelmetProvider } from 'react-helmet-async';
 
 import App from './app';
@@ -14,6 +15,7 @@ root.render(
     <HelmetProvider>
       <BrowserRouter>
         <Suspense>
+          <Analytics />
           <App />
         </Suspense>
       </BrowserRouter>
